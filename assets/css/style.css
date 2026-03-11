@@ -1,0 +1,296 @@
+/* ================= RESET ================= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima",
+        "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI",
+        "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha",
+        "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI",
+        "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya",
+        "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le",
+        "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text",
+        "Cambria Math";
+}
+
+/* ================= ROOT ================= */
+:root {
+    --error: #e81123;
+}
+
+html,
+body {
+    height: 100%;
+    color: #1b1b1b;
+    background: transparent;
+}
+
+/* ================= PAGE BACKGROUND ================= */
+/* FIX 1: This wrapper was missing from HTML — now added */
+.page-bg {
+    min-height: 100vh;
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+/* ================= SECTIONS ================= */
+/* FIX 2: table-cell requires a parent with display:table — now in HTML */
+section {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100vh;
+    width: 100rem;
+    max-width: 100%;
+    background: transparent !important;
+}
+
+/* ================= CARD ================= */
+.auth-wrapper {
+    max-width: 440px;
+    width: calc(100% - 40px);
+    padding: 44px;
+    margin: auto;
+    margin-bottom: 28px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    min-width: 320px;
+}
+
+/* ================= OPTIONS ================= */
+.opts {
+    padding: 10px 44px;
+    max-width: 440px;
+    cursor: pointer;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+}
+
+.opts:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+/* ================= TYPOGRAPHY ================= */
+.title {
+    line-height: 1.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1b1b1b;
+}
+
+.text-title {
+    font-size: 1.5rem;
+}
+
+.p {
+    font-weight: 400;
+    font-size: 15px;
+    margin: 16px 0;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+/* ================= INPUTS ================= */
+.input {
+    width: calc(100% - 20px);
+    height: 36px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .6);
+    background: transparent;
+    outline: none;
+    padding-left: 0;
+}
+
+.input:hover {
+    border-bottom-color: rgba(0, 0, 0, .8);
+}
+
+.input::placeholder {
+    font-size: 15px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: block;
+    margin-left: auto;
+    background-color: #0067b8;
+    color: #fff;
+    border: 2px solid #0067b8;
+    padding: 5px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #005da6;
+}
+
+.btn-group {
+    text-align: right;
+    width: 100%;
+    margin: 16px 0;
+}
+
+.btn-group > .btn {
+    display: inline;
+}
+
+.btn-group > .btn:not(:last-child) {
+    margin-right: 5px;
+}
+
+.btn-sec {
+    background-color: #b2b2b2;
+    color: #000;
+    border-color: #b2b2b2;
+}
+
+.btn-sec:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* ================= LINKS ================= */
+a.link {
+    text-decoration: none;
+    color: #0067b8;
+}
+
+a:hover {
+    text-decoration: underline !important;
+    color: #666;
+}
+
+a:focus {
+    border: 1px dotted #000;
+    text-decoration: underline !important;
+}
+
+/* ================= ERRORS ================= */
+.error {
+    color: var(--error);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.error-inp {
+    border-bottom-color: var(--error) !important;
+}
+
+/* ================= UTILS ================= */
+.mb-0  { margin-bottom: 0; }
+.mb-16 { margin-bottom: 16px; }
+.mt-16 { margin-top: 16px; }
+.d-none  { display: none !important; }
+.d-block { display: block; }
+.w-100   { width: 100%; }
+
+.has-icon {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.has-icon .icon {
+    display: inline-flex;
+}
+
+.identity {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* ================= CHECKBOX ================= */
+.has-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+/* ================= BACK BUTTON ================= */
+.back {
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    min-height: 28px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    background: transparent;
+}
+
+.footer a,
+.footer span {
+    color: #000;
+    font-size: 12px;
+    line-height: 28px;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.footer span {
+    font-size: 20px;
+}
+
+/* ================= MOBILE ================= */
+@media screen and (max-width: 600px) {
+
+    .page-bg {
+        background-size: contain;
+        background-position: center top;
+    }
+
+    section {
+        display: block !important;
+    }
+
+    .auth-wrapper {
+        box-shadow: none !important;
+        padding: 24px !important;
+        max-width: unset !important;
+        width: 100% !important;
+    }
+
+    .opts {
+        box-shadow: none !important;
+        padding: 8px 24px !important;
+        border: 1px solid #999;
+        max-width: calc(100% - 48px);
+        margin: 12% auto !important;
+    }
+
+    .footer {
+        justify-content: flex-start;
+    }
+}
